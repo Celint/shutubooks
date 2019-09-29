@@ -8,9 +8,9 @@
     <title>我的文章</title>
     <!--	链接文件 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="css/lbystyle.css">
-    <script src="quote/jQuery.js"></script>
-    <script src="quote/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/css/lbystyle.css">
+    <script src="../static/quote/jQuery.js"></script>
+    <script src="../staticquote/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </head>
 <body>
@@ -68,6 +68,52 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div class="container-fluid">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs" style="height: 700px">
+        </div>
+        
+        <ul class="list-group panel-body col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <li class="list-group-item"><h1>我发布的文章</h1></li>
+            <li class="list-group-item ">
+                <div class="media">
+                    <div class="media-body">
+                        <div id="title"><a href="">
+                                <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                            </a></div>
+                        <div id="brief">
+                            <p>215时报最新消息……</p>
+                        </div>
+                        <div id="author" class="pull-left">
+                            <p>the same author</p>
+                        </div>
+                        <div id="time" class="pull-right">
+                            <p>2019年9月29日</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="well col-lg-3 col-md-3 hidden-sm hidden-xs" style="position: fixed;z-index: 999">
+            <ul class="list-group text-center" role="navigation">
+                <li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
+                        style="width:200px;height:200px; border-radius:10px" alt=""> </li>
+                <li class="list-group-item">
+                    <h2>兰彬炎</h2><small>school here</small>
+                </li>
+                <li class="list-group-item" style="margin: 0 auto">
+                    <a class="btn " href="">
+                        <h4 style="display:inline">粉丝</h4>
+                        <p style="display:inline">80</p>
+                    </a>
+                    <a class="btn " href="">
+                        <h4 style="display:inline">文章</h4>
+                        <p style="display:inline">80</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
     <div id="footer" class="row panel container col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-footer">
         <div class="panel-body text-center">
             <p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
@@ -75,5 +121,6 @@
             <p>CopyRight&copy;CSU书童</p>
         </div>
     </div>
+    <script src="../static/js/lbyjs.js"></script>
 </body>
 </html>
