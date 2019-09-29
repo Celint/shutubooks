@@ -1,0 +1,20 @@
+/* CSS Document */
+
+#sider li{
+	height: 55px;
+	font-size: 20px;
+}
+#sider a{
+	color: darkgray
+}
+#title a:hover{
+	text-decoration: none;
+	color: brown;
+}
+#brief{
+	color: dimgray;
+	font-size: 120%
+}
+#search{
+	margin: 10px 0 10px 0;
+}
