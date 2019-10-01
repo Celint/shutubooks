@@ -5,75 +5,80 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="container-fluid" >
-		<div class="col-lg-3 col-md-3 hidden-sm hidden-xs" style="height: 700px;">
-		</div>
-    <div class="well col-lg-3 col-md-3 hidden-sm hidden-xs" style="position: fixed;z-index: 999">
-		<ul class="list-group text-center" role="navigation">
-			<li class="list-group-item text-center"> <img src="../static/img/lianjie.png"style="width:200px;height:200px; border-radius:10px" alt=""> 	</li>
-			<li class="list-group-item"><h2>兰彬炎</h2><small>school here</small></li>
-			<li class="list-group-item" style="margin: 0 auto">
-				<a class="btn " href="">
-					<h4 style="display:inline">粉丝</h4>
-				    <p style="display:inline">80</p>
-				</a>
-				<a class="btn " href="">
-					<h4 style="display:inline">文章</h4>
-					<p style="display:inline">80</p>
-				</a>
-			</li>
-			<li class="list-group-item">
-				<a href="" class="btn btn-info form-control">
-					加关注
-				</a>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="container col-lg-9 col-md-9 col-sm-12 col-xs-12">
-		<div class="panel panel-default">
-			<div class="panel-heading"><h1><strong>文章标题</strong></h1> <small>author_name</small></div>
-			<div class="panel-body" style="overflow: auto">
-				Panel content which shoully shown
-			</div>
-			<hr>
-			<div class="container-fluid">
-				<div class="container">
-					点赞<span>3567</span> 评论<span>3567</span>
-				</div>
-				<ul class="list-group">
-					<li class="list-group-item" > 
-						<p>写得太好了，狂吹彩虹屁</p>
-						<p>第一楼</p>
-					</li>		
-
+    <div class="container">
+		<div class="container siderbar">
+			<div style="position: absolute;">
+				<ul class="list-group text-center" role="navigation">
+					<li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
+							style="width:200px;height:200px; border-radius:10px" alt=""> </li>
+					<li class="list-group-item">
+						<h2>兰彬炎</h2><small>school here</small>
+					</li>
+					<li class="list-group-item" style="margin: 0 auto">
+						<a class="btn " href="">
+							<h4 style="display:inline">粉丝</h4>
+							<p style="display:inline">80</p>
+						</a>
+						<a class="btn " href="">
+							<h4 style="display:inline">文章</h4>
+							<p style="display:inline">80</p>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="" class="btn btn-info form-control">
+							加关注
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-		<ul class="list-group panel-body" style="border:1px solid rgb(221, 218, 218);border-radius:5px">
-			<li class="list-group-item ">
-				<div class="media">
-					<div class="media-body">
-						<div id="title"><a href="">
-								<h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
-							</a></div>
-						<div id="brief">
-							<p>215时报最新消息……</p>
-						</div>
-						<div id="author" class="pull-left">
-							<p>the same author</p>
-						</div>
-						<div id="time" class="pull-right">
-							<p>2019年9月29日</p>
-						</div>
-					</div>
+		<div class="container contentbar" style="height: 700px;">
+			<div class="article_itself panel panel-info">
+				<div class="panel-heading">
+					<h1><strong>文章标题</strong></h1> <small>author_name</small>
 				</div>
-			</li>
-		</ul>
-	</div>
-	</div>
-	<div classs="container-fluid panel ">
-		
+				<div class="panel-body" style="overflow: auto">
+					Panel content which shoully shown
+				</div>
+			</div>
+			<hr>
+			<div class="comment">
+				<div class="container">
+					点赞<span>3567</span> 评论<span>3567</span>
+				</div>
+				<hr>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<p>写得太好了，狂吹彩虹屁</p>
+						<p>第一楼</p>
+					</li>
+			
+				</ul>
+			</div>
+			<hr>
+			<div class="thesameauthor">
+				<ul class="list-group">
+					<li class="list-group-item ">
+						<div class="media">
+							<div class="media-body">
+								<div id="title"><a href="">
+										<h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+									</a></div>
+								<div id="brief">
+									<p>215时报最新消息……</p>
+								</div>
+								<div id="author" class="pull-left">
+									<p>the same author</p>
+								</div>
+								<div id="time" class="pull-right">
+									<p>2019年9月29日</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 {% endblock content %}

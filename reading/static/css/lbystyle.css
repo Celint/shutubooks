@@ -1,5 +1,20 @@
 /* CSS Document */
 
+.navigationbar{}
+.content{
+	margin: 5%
+}
+.sidebar{
+	width: 30%;
+	float: left;
+	position: relative;
+}
+.contentbar{
+	width: 70%;
+	float:right;
+}
+.footerbar{}
+
 #sider li{
 	height: 55px;
 	font-size: 20px;
