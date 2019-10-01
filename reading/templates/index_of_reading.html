@@ -6,11 +6,16 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit = no"><!--  响应式meta标签-->
 	<meta http-equiv="x-ua-compatible" content="ie=edge"><!--强制IE按照最新渲染模式显示内?-->
 <!--	链接文件 -->
-	<link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
+	<!-- <link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
 	<link rel="stylesheet" href="{% static 'css/lbystyle.css' %}">
     <script src="{% static 'quote/jQuery.js' %}"></script>
     <script src="{% static 'quote/bootstrap.js' %}"></script>
-    <script src="{% static 'quote/popper.min.js' %}" ></script>
+    <script src="{% static 'quote/popper.min.js' %}" ></script>  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/lbystyle.css">
+    <script src="../../static/quote/jQuery.js"></script>
+    <script src="../../static/quote/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </head>
 	
 <body>
@@ -81,7 +86,7 @@
                     <li><a href="">我发表的</a></li>
                 </ul>
             </div>
-            <div id="sender" style="" class="col-lg-7 col-md-8 col-xs-12 col-sm-12">
+            <div id="sender" class="col-lg-7 col-md-8 col-xs-12 col-sm-12">
                 <textarea name="" id="" style="height:150px"class="form-control" placeholder="最近又读到什么好东西？"></textarea>
                 <div id="operation" style="margin-top: 20px">
                     <a class="btn-link"><img style="width: 40px; height: 40px" src="{% static 'img/tupian.png' %}" alt=""><em>图片</em></a>
