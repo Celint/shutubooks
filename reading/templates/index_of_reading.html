@@ -6,166 +6,168 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit = no"><!--  响应式meta标签-->
 	<meta http-equiv="x-ua-compatible" content="ie=edge"><!--强制IE按照最新渲染模式显示内?-->
 <!--	链接文件 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" >
-	<link rel="stylesheet" href="../static/css/lbystyle.css">
-    <script src="../static/quote/jQuery.js"></script>
-    <script src="../static/quote/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+	<link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
+	<link rel="stylesheet" href="{% static 'css/lbystyle.css' %}">
+    <script src="{% static 'quote/jQuery.js' %}"></script>
+    <script src="{% static 'quote/bootstrap.js' %}"></script>
+    <script src="{% static 'quote/popper.min.js' %}" ></script>
 </head>
 	
 <body>
-<!--导航栏-->
-	<nav class="navbar navbar-default">
-  		<div class="container-fluid"> 
-   		 <!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header">
-      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      		<a class="navbar-brand" href="#">Logo</a></div>
-    		<!-- Collect the nav links, forms, and other content for toggling -->
-    		<div class="collapse navbar-collapse" id="defaultNavbar1">
-      			<ul class="nav navbar-nav">
-        			<li class="active"><a href="#">书城<span class="sr-only">(current)</span></a></li>
-        			<li><a href="#">博客</a></li>
-        			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">关于<span class="caret"></span></a>
-         				<ul class="dropdown-menu" role="menu">
-            				<li><a href="#">Action</a></li>
-            				<li><a href="#">Another action</a></li>
-            				<li><a href="#">Something else here</a></li>
-            				<li class="divider"></li>
-            				<li><a href="#">Separated link</a></li>
-            				<li class="divider"></li>
-            				<li><a href="#">One more separated link</a></li>
-          				</ul>
-					</li>
-      			</ul>
-      			<form class="navbar-form navbar-left" role="search">
-        			<div class="form-group">
-          				<input type="text" class="form-control" placeholder="Search">
-        			</div>
-        			<button type="submit" class="btn btn-default">搜索</button>
-      			</form>
-      			<ul class="nav navbar-nav navbar-right">
-        			<li><a href="#">登录</a></li>
-					<li><a href="#">注册</a></li>
-        			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">个人中心<span class="caret"></span></a>
-          				<ul class="dropdown-menu" role="menu">
-           					<li><a href="#">个人信息</a></li>
-    	   					<li><a href="#">我的卖书</a></li>
-    	   					<li><a href="#">我的收藏</a></li>
-    	   					<li><a href="#">学生认证</a></li>
-    	   					<li><a href="#">我的文章</a></li>
-							<li><a href="#">我点赞的</a></li>
-            				<li class="divider"></li>
-            				<li><a href="#">退出登录</a></li>
-          				</ul>
-        			</li>
-      			</ul>
-    		</div>
-    <!-- /.navbar-collapse --> 
-  		</div>
-  <!-- /.container-fluid --> 
-	</nav>
-	<div class="jumbotron">
-        <h1>欢迎来到CSU读书博客</h1>
-        <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>        
-        <p><a class="btn btn-primary btn-lg" href="#upper" role="button" >马上进入</a></p>
-	</div>
-	<div   style="height:700px">
-	<div id="upper" style="height: 250px">
-		<div id="sider" class="col-lg-2 col-sm-12 col-md-4 col-xs-12">
-			<ul class="nav nav-pills nav-stacked ">
-				<li><a href="" >首页</a></li>
-				<li><a href="">去书城</a></li>
-				<li><a href="">我点赞的</a></li>
-				<li><a href="">我发表的</a></li>
-			</ul>			
-		</div>
-		<div id="sender" style="" class="col-lg-7 col-md-8 col-xs-12 col-sm-12">
-			<textarea name="" id="" style="height:150px"class="form-control" placeholder="最近又读到什么好东西？"></textarea>
-			<div id="operation" style="margin-top: 20px">
-				<a class="btn-link"><img style="width: 40px; height: 40px" src="../static/img/tupian.png" alt=""><em>图片</em></a>
-				&nbsp;&nbsp;
-				<a class="btn-link" href=""><img style="width: 40px;height:40px" src="../static/img/lianjie.png" alt=""><em>原文链接</em></a>
-				
-				<div class="pull-right">
-					<select class="form-control-static">
-					    <option value="">公开</option>
-					    <option value="">仅自己可见</option>
-					    <option value="">粉丝可见</option>
-				    </select>
-					&nbsp;&nbsp;
-					<button class="btn btn-info" style="float:right">					
-						马上发布
-						<!-- 弹出写文章的页面 -->
-					</button>
-				</div>			
-		   </div>
-	    </div>
-		<div id="logon" style="float: right" class="col-lg-3 hidden-md hidden-sm hidden-xs" >
-			<form role="form" class= "">
-				<div class="input-group" style="margin-top: 5px">
-					<span class="input-group-addon">账户</span><input type="text" class="form-control" placeholder="user email or tel">
-				</div>
-				<div class="input-group" style="margin-top: 30px">
-					<span class="input-group-addon">密码</span><input type="password" class="form-control" placeholder="password">
-				</div>
-				<div class="" style="margin-top: 30px">
-					<label>
-						<input type="checkbox" name="">记住密码
-					</label>
-					<label class="pull-right">
-						<input type="checkbox" name="">忘记密码
-					</label>
-				</div>
-				<div style="margin-top: 15px" class="form-inline">
-					<button class="btn btn-success  form-control ">立即登录</button>
-					<button class="btn btn-danger form-control pull-right">没有账号，去注册</button>
-				</div>
-			</form>
-		</div>
-	</div>
-	<div id="content ">
-	<div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
-		<ul id="list" class="list-group">
-		    <li class="list-group-item ">
-				<div class="media">
-				<a href="" class="media-left">
-					<div class="img-responsive">
-						<img src="img/picture__easy.png" style="width:100px;height:100px" alt="">
-					</div>
-				</a>
-				<div class="media-body">
-					<div id="title"><a href=""><h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2></a></div>
-					<div id="brief"><p>215时报最新消息……</p></div>
-					<div id="author" class="pull-left"><p>215时报</p></div>
-					<div id="time" class="pull-right"><p>2019年9月29日</p></div>
-				</div>
-				</div>
-			</li>			
-		</ul>
-	</div>
-	<div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-		<div id="search"class="input-group">			
-    	    <input type="text" class="form-control">
-			<span class="input-group-btn">
-    			<button type="button" class="btn btn-info">搜索</button>
-			</span>
-		</div> 
-		<ul class="list-group">
-			<li class="list-group-item">
-				<div><a href=""><h4><strong>兰彬炎长高了，太令人震惊了</h4></strong></a></div>
-			</li>
-		</ul>
-	</div>
-	</div>
-	</div>
-	<div id="footer" class="row panel container col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-footer">		
-		<div class="panel-body text-center">
-			<p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
-			<p><span>CSUSHUTONG@163.com</span></p>
-			<p>CopyRight&copy;CSU书童</p>
-		</div>
-	</div>
-	<script src="../static/js/lbyjs.js"></script>
+    <div class="container">
+    <!--导航栏-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+             <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="#">Logo</a></div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="defaultNavbar1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">书城<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">博客</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">关于<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">个人中心<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">个人信息</a></li>
+                                <li><a href="#">我的卖书</a></li>
+                                <li><a href="#">我的收藏</a></li>
+                                <li><a href="#">学生认证</a></li>
+                                <li><a href="#">我的文章</a></li>
+                                <li><a href="#">我点赞的</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        <!-- /.navbar-collapse -->
+            </div>
+      <!-- /.container-fluid -->
+        </nav>
+        <div class="jumbotron">
+            <h1>欢迎来到CSU读书博客</h1>
+            <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>
+            <p><a class="btn btn-primary btn-lg" href="#upper" role="button" >马上进入</a></p>
+        </div>
+        <div   style="height:700px">
+        <div id="upper" style="height: 250px">
+            <div id="sider" class="col-lg-2 col-sm-12 col-md-4 col-xs-12">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li><a href="" >首页</a></li>
+                    <li><a href="">去书城</a></li>
+                    <li><a href="">我点赞的</a></li>
+                    <li><a href="">我发表的</a></li>
+                </ul>
+            </div>
+            <div id="sender" style="" class="col-lg-7 col-md-8 col-xs-12 col-sm-12">
+                <textarea name="" id="" style="height:150px"class="form-control" placeholder="最近又读到什么好东西？"></textarea>
+                <div id="operation" style="margin-top: 20px">
+                    <a class="btn-link"><img style="width: 40px; height: 40px" src="{% static 'img/tupian.png' %}" alt=""><em>图片</em></a>
+                    &nbsp;&nbsp;
+                    <a class="btn-link" href=""><img style="width: 40px;height:40px" src="{% static 'img/lianjie.png' %}" alt=""><em>原文链接</em></a>
+
+                    <div class="pull-right">
+                        <select class="form-control-static">
+                            <option value="">公开</option>
+                            <option value="">仅自己可见</option>
+                            <option value="">粉丝可见</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <button class="btn btn-info" style="float:right">
+                            马上发布
+                            <!-- 弹出写文章的页面 -->
+                        </button>
+                    </div>
+               </div>
+            </div>
+            <div id="logon" style="float: right" class="col-lg-3 hidden-md hidden-sm hidden-xs" >
+                <form role="form" class= "">
+                    <div class="input-group" style="margin-top: 5px">
+                        <span class="input-group-addon">账户</span><input type="text" class="form-control" placeholder="user email or tel">
+                    </div>
+                    <div class="input-group" style="margin-top: 30px">
+                        <span class="input-group-addon">密码</span><input type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="" style="margin-top: 30px">
+                        <label>
+                            <input type="checkbox" name="">记住密码
+                        </label>
+                        <label class="pull-right">
+                            <input type="checkbox" name="">忘记密码
+                        </label>
+                    </div>
+                    <div style="margin-top: 15px" class="form-inline">
+                        <button class="btn btn-success  form-control ">立即登录</button>
+                        <button class="btn btn-danger form-control pull-right">没有账号，去注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="content ">
+        <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+            <ul id="list" class="list-group">
+                <li class="list-group-item ">
+                    <div class="media">
+                    <a href="" class="media-left">
+                        <div class="img-responsive">
+                            <img src="{% static 'img/picture__easy.png' %}" style="width:100px;height:100px" alt="">
+                        </div>
+                    </a>
+                    <div class="media-body">
+                        <div id="title"><a href=""><h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2></a></div>
+                        <div id="brief"><p>215时报最新消息……</p></div>
+                        <div id="author" class="pull-left"><p>215时报</p></div>
+                        <div id="time" class="pull-right"><p>2019年9月29日</p></div>
+                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <div id="search"class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-info">搜索</button>
+                </span>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div><a href=""><h4><strong>兰彬炎长高了，太令人震惊了</h4></strong></a></div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        <div id="footer" class="row panel container col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-footer">
+            <div class="panel-body text-center">
+                <p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
+                <p><span>CSUSHUTONG@163.com</span></p>
+                <p>CopyRight&copy;CSU书童</p>
+            </div>
+        </div>
+    </div>
+	<script src="{% static 'js/lbyjs.js' %}"></script>
 </body>
 </html>

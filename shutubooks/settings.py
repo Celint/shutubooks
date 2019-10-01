@@ -65,6 +65,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            # 请求静态文件
+            'builtins' : [
+                'django.templatetags.static'
+            ],
         },
     },
 ]
@@ -105,6 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR,"static")
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
