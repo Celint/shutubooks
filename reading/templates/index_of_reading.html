@@ -5,30 +5,31 @@
 {% endblock title %}
 
 {% block content %}
-    <a href="detail_of_article.html">作死小兰</a>
-    <a href="myarticles.html">作死小兰2号</a>
+<div class="container">
     <div class="jumbotron">
         <h1>欢迎来到CSU读书博客</h1>
         <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>
-        <p><a class="btn btn-primary btn-lg" href="#upper" role="button" >马上进入</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#upper" role="button">马上进入</a></p>
     </div>
-    <div   style="height:700px">
-        <div id="upper" style="height: 250px">
+    <div style="height:700px">
+        <div id="upper" class="row" style="height: 250px">
             <div id="sider" class="col-lg-2 col-sm-12 col-md-4 col-xs-12">
-                <ul class="nav nav-pills nav-stacked ">
-                    <li><a href="" >首页</a></li>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="">首页</a></li>
                     <li><a href="">去书城</a></li>
                     <li><a href="">我点赞的</a></li>
                     <li><a href="">我发表的</a></li>
                 </ul>
             </div>
-            <div id="sender" class="col-lg-7 col-md-8 col-xs-12 col-sm-12">
-                <textarea name="" id="" style="height:150px"class="form-control" placeholder="最近又读到什么好东西？"></textarea>
+            <div id="sender" class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
+                <textarea id="summernote" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
                 <div id="operation" style="margin-top: 20px">
-                    <a class="btn-link"><img style="width: 40px; height: 40px" src="{% static 'img/tupian.png' %}" alt=""><em>图片</em></a>
+                    <a class="btn-link"><img style="width: 40px; height: 40px" src="{% static 'img/tupian.png' %}"
+                            alt=""><em>图片</em></a>
                     &nbsp;&nbsp;
-                    <a class="btn-link" href=""><img style="width: 40px;height:40px" src="{% static 'img/lianjie.png' %}" alt=""><em>原文链接</em></a>
-
+                    <a class="btn-link" href=""><img style="width: 40px;height:40px" src="{% static 'img/lianjie.png' %}"
+                            alt=""><em>原文链接</em></a>
+    
                     <div class="pull-right">
                         <select class="form-control-static">
                             <option value="">公开</option>
@@ -41,53 +42,34 @@
                             <!-- 弹出写文章的页面 -->
                         </button>
                     </div>
-               </div>
-            </div>
-            <div id="logon" style="float: right" class="col-lg-3 hidden-md hidden-sm hidden-xs" >
-                <form role="form" class= "">
-                    <div class="input-group" style="margin-top: 5px">
-                        <span class="input-group-addon">账户</span><input type="text" class="form-control" placeholder="user email or tel">
-                    </div>
-                    <div class="input-group" style="margin-top: 30px">
-                        <span class="input-group-addon">密码</span><input type="password" class="form-control" placeholder="password">
-                    </div>
-                    <div class="" style="margin-top: 30px">
-                        <label>
-                            <input type="checkbox" name="">记住密码
-                        </label>
-                        <label class="pull-right">
-                            <input type="checkbox" name="">忘记密码
-                        </label>
-                    </div>
-                    <div style="margin-top: 15px" class="form-inline">
-                        <button class="btn btn-success  form-control ">立即登录</button>
-                        <button class="btn btn-danger form-control pull-right">没有账号，去注册</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
         <div id="content ">
-            <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+            <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <ul id="list" class="list-group">
                     <li class="list-group-item ">
                         <div class="media">
-                        <a href="" class="media-left">
-                            <div class="img-responsive">
-                                <img src="{% static 'img/picture__easy.png' %}" style="width:100px;height:100px" alt="">
+                            <div class="media-body">
+                                <div id="title"><a href="">
+                                        <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                    </a></div>
+                                <div id="brief">
+                                    <p>215时报最新消息……</p>
+                                </div>
+                                <div id="author" class="pull-left">
+                                    <p>215时报</p>
+                                </div>
+                                <div id="time" class="pull-right">
+                                    <p>2019年9月29日</p>
+                                </div>
                             </div>
-                        </a>
-                        <div class="media-body">
-                            <div id="title"><a href=""><h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2></a></div>
-                            <div id="brief"><p>215时报最新消息……</p></div>
-                            <div id="author" class="pull-left"><p>215时报</p></div>
-                            <div id="time" class="pull-right"><p>2019年9月29日</p></div>
-                        </div>
                         </div>
                     </li>
                 </ul>
             </div>
             <div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-                <div id="search"class="input-group">
+                <div id="search" class="input-group">
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-info">搜索</button>
@@ -95,12 +77,16 @@
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <div><a href=""><h4><strong>兰彬炎长高了，太令人震惊了</h4></strong></a></div>
+                        <div><a href="">
+                                <h4><strong>兰彬炎长高了，太令人震惊了</h4></strong>
+                            </a></div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+</div>
+    
 	<script src="{% static 'js/lbyjs.js' %}"></script>
 
 {% endblock content %}

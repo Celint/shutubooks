@@ -1,41 +1,39 @@
 {% extends 'reading_theme.html' %}
 
 {% block title %}
-{#    TODO #}
+{#文章详情#}
 {% endblock title %}
 
 {% block content %}
     <div class="container">
-		<div class="container siderbar">
-			<div style="position: absolute;">
-				<ul class="list-group text-center" role="navigation">
-					<li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
-							style="width:200px;height:200px; border-radius:10px" alt=""> </li>
-					<li class="list-group-item">
-						<h2>兰彬炎</h2><small>school here</small>
-					</li>
-					<li class="list-group-item" style="margin: 0 auto">
-						<a class="btn " href="">
-							<h4 style="display:inline">粉丝</h4>
-							<p style="display:inline">80</p>
-						</a>
-						<a class="btn " href="">
-							<h4 style="display:inline">文章</h4>
-							<p style="display:inline">80</p>
-						</a>
-					</li>
-					<li class="list-group-item">
-						<a href="" class="btn btn-info form-control">
-							加关注
-						</a>
-					</li>
-				</ul>
-			</div>
+		<div class="siderbar" style="width: 15%;float:left;">
+			<ul class="list-group text-center" role="navigation">
+				<li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
+						style="width:200px;height:200px; border-radius:10px" alt=""> </li>
+				<li class="list-group-item">
+					<h2>兰彬炎</h2><small>school here</small>
+				</li>
+				<li class="list-group-item" style="margin: 0 auto">
+					<a class="btn " href="">
+						<h4 style="display:inline">粉丝</h4>
+						<p style="display:inline">80</p>
+					</a>
+					<a class="btn " href="">
+						<h4 style="display:inline">文章</h4>
+						<p style="display:inline">80</p>
+					</a>
+				</li>
+				<li class="list-group-item">
+					<a href="" class="btn btn-info form-control">
+						加关注
+					</a>
+				</li>
+			</ul>
 		</div>
-		<div class="container contentbar" style="height: 700px;">
+		<div class="contentbar" style="height: 700px;float:right;width:83%">
 			<div class="article_itself panel panel-info">
 				<div class="panel-heading">
-					<h1><strong>文章标题</strong></h1> <small>author_name</small>
+					<h1><strong>文章标题</strong></h1> <small>author_name_here</small>
 				</div>
 				<div class="panel-body" style="overflow: auto">
 					Panel content which shoully shown
