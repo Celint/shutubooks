@@ -6,22 +6,17 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit = no"><!--  响应式meta标签-->
 	<meta http-equiv="x-ua-compatible" content="ie=edge"><!--强制IE按照最新渲染模式显示内?-->
 <!--	链接文件 -->
-	<!-- <link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
+	<link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
 	<link rel="stylesheet" href="{% static 'css/lbystyle.css' %}">
     <script src="{% static 'quote/jQuery.js' %}"></script>
     <script src="{% static 'quote/bootstrap.js' %}"></script>
-    <script src="{% static 'quote/popper.min.js' %}" ></script>  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/lbystyle.css">
-    <script src="../../static/quote/jQuery.js"></script>
-    <script src="../../static/quote/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="{% static 'quote/popper.min.js' %}" ></script>
 </head>
 	
 <body>
-    <div class="container">
+    <div class="container-fluid row" >
     <!--导航栏-->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default ">
             <div class="container-fluid">
              <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -71,11 +66,14 @@
             </div>
       <!-- /.container-fluid -->
         </nav>
+    </div>
+    <div class="container">
         <div class="jumbotron">
             <h1>欢迎来到CSU读书博客</h1>
             <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>
             <p><a class="btn btn-primary btn-lg" href="#upper" role="button" >马上进入</a></p>
         </div>
+
         <div   style="height:700px">
         <div id="upper" style="height: 250px">
             <div id="sider" class="col-lg-2 col-sm-12 col-md-4 col-xs-12">
@@ -165,12 +163,13 @@
         </div>
         </div>
         </div>
-        <div id="footer" class="row panel container col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-footer">
-            <div class="panel-body text-center">
-                <p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
-                <p><span>CSUSHUTONG@163.com</span></p>
-                <p>CopyRight&copy;CSU书童</p>
-            </div>
+        
+    </div>
+    <div id="footer" class="row well">
+        <div class="text-center">
+            <p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
+            <p><span>CSUSHUTONG@163.com</span></p>
+            <p>CopyRight&copy;CSU书童</p>
         </div>
     </div>
 	<script src="{% static 'js/lbyjs.js' %}"></script>

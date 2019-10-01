@@ -1,4 +1,18 @@
 /* CSS Document */
+body{
+	background-color: rgb(187, 177, 177);
+}
+.navigationbar{}
+.sidebar{
+	width: 30%;
+	float: left;
+	position: relative;
+}
+.contentbar{
+	width: 70%;
+	float:right;
+}
+.footerbar{}
 
 #sider li{
 	height: 55px;
