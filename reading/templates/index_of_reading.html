@@ -23,22 +23,21 @@
             </div>
             <div id="sender" class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
                 <textarea id="editor" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
-                <div id="operation" style="margin-top: 20px">
-                    tips:点击右上角按钮扩展至全屏！如有引用请在文中注明原文链接哦！
-    
-                    <div class="pull-right">
-                        <select class="form-control-static">
-                            <option value="">公开</option>
-                            <option value="">仅自己可见</option>
-                            <option value="">粉丝可见</option>
-                        </select>
-                        &nbsp;&nbsp;
-                        <button class="btn btn-info" style="float:right">
-                            马上发布
-                            <!-- 弹出写文章的页面 -->
-                        </button>
-                    </div>
+              
+                <div id="operation"style="margin-top: 20px">
+                    <div class="input-group">  
+                        <input type="text" class="form-control" disabled placeholder=" tips:点击右上角按钮扩展至全屏！如有引用请在文中注明原文链接哦！"> 
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">
+                                存为草稿
+                            </button>
+                            <button class="btn btn-info" type="button">
+                                马上发布
+                            </button>
+                        </span>                        
+                    </div>                                 
                 </div>
+                
             </div>
         </div>
         <hr>
