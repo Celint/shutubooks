@@ -12,3 +12,7 @@ def mine(request):
     
 def books(request):
     return render(request, 'mybooks.html')
+
+
+def support(request):
+    return render(request, 'mysupport.html')

@@ -1,0 +1,40 @@
+{% extends 'reading_theme.html' %}
+
+{% block title %}
+{#我的文章#}
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="contentbar" style="height:700px;">
+        <div class="panel-info">
+            <li class="panel-heading list-group-item">
+                <h1>我点赞的文章</h1>
+            </li>
+        </div>
+        <div class="articles">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="media">
+                        <div class="media-body">
+                            <div><a href="">
+                                    <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                </a></div>
+                            <div>
+                                <p>215时报最新消息……</p>
+                            </div>
+                            <div class="pull-left">
+                                <p>author</p>
+                            </div>
+                            <div class="pull-right">
+                                <p>2019年9月29日</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>                
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
