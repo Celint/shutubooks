@@ -9,11 +9,12 @@
     <div class="jumbotron">
         <h1>欢迎来到CSU读书博客</h1>
         <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>
+        <!-- for what i did all this? i am not coding i am learning git and god damn it github -->
         <p><a class="btn btn-primary btn-lg" href="#upper" role="button">马上进入</a></p>
     </div>
     <div style="height:700px">
         <div id="upper" class="row" style="height: 250px">
-            <div id="sider" class="col-lg-2 col-sm-12 col-md-4 col-xs-12">
+            <div id="sider" class="navbar navbar-nav col-lg-2 col-sm-12 col-md-4 col-xs-12">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="">首页</a></li>
                     <li><a href="">去书城</a></li>
@@ -22,11 +23,8 @@
                 </ul>
             </div>
             <div id="sender" class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
-                <textarea id="summernote" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
+                <textarea id="editor" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
                 <div id="operation" style="margin-top: 20px">
-                    <a class="btn-link"><img style="width: 40px; height: 40px" src="{% static 'img/tupian.png' %}"
-                            alt=""><em>图片</em></a>
-                    &nbsp;&nbsp;
                     <a class="btn-link" href=""><img style="width: 40px;height:40px" src="{% static 'img/lianjie.png' %}"
                             alt=""><em>原文链接</em></a>
     
@@ -86,7 +84,5 @@
         </div>
     </div>
 </div>
-    
-	<script src="{% static 'js/lbyjs.js' %}"></script>
 
 {% endblock content %}
