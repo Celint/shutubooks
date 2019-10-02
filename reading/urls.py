@@ -7,5 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('article/', views.article),
     path('detail/', views.detail),
-    path('mine/',views.mine)
+    path('mine/', views.mine),
+    path('books/', views.books)
 ]

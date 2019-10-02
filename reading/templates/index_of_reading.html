@@ -9,13 +9,12 @@
     <div class="jumbotron">
         <h1>欢迎来到CSU读书博客</h1>
         <p>在这里你可以爱书之人进行亲密无间的交谈并分享自己的读书感受</p>
-        <!-- for what i did all this? i am not coding i am learning git and god damn it github -->
         <p><a class="btn btn-primary btn-lg" href="#upper" role="button">马上进入</a></p>
     </div>
     <div style="height:700px">
         <div id="upper" class="row" style="height: 250px">
             <div id="sider" class="navbar navbar-nav col-lg-2 col-sm-12 col-md-4 col-xs-12">
-                <ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-stacked">
                     <li><a href="">首页</a></li>
                     <li><a href="">去书城</a></li>
                     <li><a href="">我点赞的</a></li>
@@ -25,8 +24,7 @@
             <div id="sender" class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
                 <textarea id="editor" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
                 <div id="operation" style="margin-top: 20px">
-                    <a class="btn-link" href=""><img style="width: 40px;height:40px" src="{% static 'img/lianjie.png' %}"
-                            alt=""><em>原文链接</em></a>
+                    tips:点击右上角按钮扩展至全屏！如有引用请在文中注明原文链接哦！
     
                     <div class="pull-right">
                         <select class="form-control-static">
@@ -43,44 +41,43 @@
                 </div>
             </div>
         </div>
-        <div id="content ">
-            <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <ul id="list" class="list-group">
-                    <li class="list-group-item ">
-                        <div class="media">
-                            <div class="media-body">
-                                <div id="title"><a href="">
-                                        <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
-                                    </a></div>
-                                <div id="brief">
-                                    <p>215时报最新消息……</p>
-                                </div>
-                                <div id="author" class="pull-left">
-                                    <p>215时报</p>
-                                </div>
-                                <div id="time" class="pull-right">
-                                    <p>2019年9月29日</p>
-                                </div>
+        <hr>
+        <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <ul id="list" class="list-group">
+                <li class="list-group-item ">
+                    <div class="media">
+                        <div class="media-body">
+                            <div id="title"><a href="">
+                                    <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                </a></div>
+                            <div id="brief">
+                                <p>215时报最新消息……</p>
+                            </div>
+                            <div id="author" class="pull-left">
+                                <p>215时报</p>
+                            </div>
+                            <div id="time" class="pull-right">
+                                <p>2019年9月29日</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <div id="search" class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-info">搜索</button>
+                </span>
             </div>
-            <div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-                <div id="search" class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-info">搜索</button>
-                    </span>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div><a href="">
-                                <h4><strong>兰彬炎长高了，太令人震惊了</h4></strong>
-                            </a></div>
-                    </li>
-                </ul>
-            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div><a href="">
+                            <h4><strong>兰彬炎长高了，太令人震惊了</h4></strong>
+                        </a></div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

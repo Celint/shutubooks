@@ -12,3 +12,6 @@ def detail(request):
 
 def mine(request):
     return render(request, 'myarticles.html')
+    
+def books(request):
+    return render(request, 'mybooks.html')
