@@ -6,33 +6,32 @@
 
 {% block content %}
     <div class="container"> 
-        <div class="siderbar" style="width: 15%;float:left;">
-            <ul class="list-group text-center" role="navigation">
-                <li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
-                        style="width:200px;height:200px; border-radius:10px" alt=""> </li>
-                <li class="list-group-item">
-                    <h2>兰彬炎</h2><small>school here</small>
-                </li>
-                <li class="list-group-item" style="margin: 0 auto">
-                    <a class="btn " href="">
-                        <h4 style="display:inline">粉丝</h4>
-                        <p style="display:inline">80</p>
-                    </a>
-                    <a class="btn " href="">
-                        <h4 style="display:inline">文章</h4>
-                        <p style="display:inline">80</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="contentbar" style="height:700px;float:right;width:83%">
+        <div class="contentbar" style="height:700px;">
             <div class="panel-info">
                 <li class="panel-heading list-group-item">
-                    <h1>我发布的文章</h1>
+                    <h1>我保存的文章</h1>
                 </li>
             </div>       
             <div class="articles">
                 <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="media"><!-- TODO:跳转到detail_of_article.html显示文章信息 -->
+                            <div class="media-body">
+                                <div id="title"><a href="">
+                                        <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                    </a></div>
+                                <div id="brief">
+                                    <p>215时报最新消息……</p>
+                                </div>
+                                <div id="author" class="pull-left">
+                                    <p>the same author</p>
+                                </div>
+                                <div id="time" class="pull-right">
+                                    2019年9月30日 已发布
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <li class="list-group-item">
                         <div class="media">
                             <div class="media-body">
@@ -51,24 +50,6 @@
                             </div>
                         </div>
                     </li>
-                <li class="list-group-item">
-                    <div class="media">
-                        <div class="media-body">
-                            <div id="title"><a href="">
-                                    <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
-                                </a></div>
-                            <div id="brief">
-                                <p>215时报最新消息……</p>
-                            </div>
-                            <div id="author" class="pull-left">
-                                <p>the same author</p>
-                            </div>
-                            <div id="time" class="pull-right">
-                                <p>2019年9月29日</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
                 </ul>
             </div>            
         </div> 

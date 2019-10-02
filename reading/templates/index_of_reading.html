@@ -12,51 +12,51 @@
         <p><a class="btn btn-primary btn-lg" href="#upper" role="button">马上进入</a></p>
     </div>
     <div style="height:700px">
-        <div id="upper" class="row" style="height: 250px">
-            <div id="sider" class="navbar navbar-nav col-lg-2 col-sm-12 col-md-4 col-xs-12">
+        <div class="row" style="height: 250px">
+            <div class="navbar navbar-nav col-lg-2 col-sm-12 col-md-4 col-xs-12">
                 <ul class="nav nav-stacked">
-                    <li><a href="">首页</a></li>
-                    <li><a href="">去书城</a></li>
-                    <li><a href="">我点赞的</a></li>
-                    <li><a href="">我发表的</a></li>
+                    <li><a href="">首页</a></li><!--TODO:跳转到首页-->
+                    <li><a href="">去书城</a></li> <!--TODO:跳转到书城-->
+                    <li><a href="">我点赞的</a></li> <!--TODO:跳转到mysupport.html-->
+                    <li><a href="">我发表的</a></li> <!--TODO:跳转到myarticles.html-->
                 </ul>
             </div>
-            <div id="sender" class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
-                <textarea id="editor" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea>
-                <div id="operation" style="margin-top: 20px">
-                    tips:点击右上角按钮扩展至全屏！如有引用请在文中注明原文链接哦！
-    
-                    <div class="pull-right">
-                        <select class="form-control-static">
-                            <option value="">公开</option>
-                            <option value="">仅自己可见</option>
-                            <option value="">粉丝可见</option>
-                        </select>
-                        &nbsp;&nbsp;
-                        <button class="btn btn-info" style="float:right">
-                            马上发布
-                            <!-- 弹出写文章的页面 -->
-                        </button>
-                    </div>
+            <div class="col-lg-10 col-md-8 col-xs-12 col-sm-12">
+                <textarea id="editor" style="height:200px" class="form-control" placeholder="最近又读到什么好东西？"></textarea> 
+                <div style="margin-top: 20px">
+                    <div class="input-group">  
+                        <input type="text" class="form-control" disabled placeholder=" tips:点击右上角按钮扩展至全屏！如有引用请在文中注明原文链接哦！"> 
+                        <span class="input-group-btn">
+                            <!--TODO:提交保存输入的内容-->
+                            <button class="btn btn-info" type="button">
+                                存为草稿
+                            </button>
+                            <button class="btn btn-info" type="button">
+                                马上发布
+                            </button>
+                        </span>                        
+                    </div>                                 
                 </div>
+                
             </div>
         </div>
         <hr>
-        <div id="sent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <ul id="list" class="list-group">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <ul class="list-group">
                 <li class="list-group-item ">
                     <div class="media">
                         <div class="media-body">
-                            <div id="title"><a href="">
+                            <!-- TODO:跳转到detail_of_article.html显示文章信息 -->
+                            <div><a href="">
                                     <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
                                 </a></div>
-                            <div id="brief">
+                            <div>
                                 <p>215时报最新消息……</p>
                             </div>
-                            <div id="author" class="pull-left">
+                            <div class="pull-left">
                                 <p>215时报</p>
                             </div>
-                            <div id="time" class="pull-right">
+                            <div class="pull-right">
                                 <p>2019年9月29日</p>
                             </div>
                         </div>
@@ -64,14 +64,16 @@
                 </li>
             </ul>
         </div>
-        <div id="ranklist" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-            <div id="search" class="input-group">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <div class="input-group">
                 <input type="text" class="form-control">
                 <span class="input-group-btn">
                     <button type="button" class="btn btn-info">搜索</button>
                 </span>
+                <!--TODO:搜索-->
             </div>
             <ul class="list-group">
+                <!-- TODO:跳转到detail_of_article.html显示文章信息 -->
                 <li class="list-group-item">
                     <div><a href="">
                             <h4><strong>兰彬炎长高了，太令人震惊了</h4></strong>
