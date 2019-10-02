@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
     path('article/', views.article),
-    path('article/<article_id>/', views.detail),
+    path('detail/', views.detail),
+    path('mine/',views.mine)
 ]

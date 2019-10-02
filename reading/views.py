@@ -7,5 +7,8 @@ def index(request):
 def article(request):
     return render(request, 'article.html')
 
-def detail(request, slug):
+def detail(request):
     return render(request, 'detail_of_article.html')
+
+def mine(request):
+    return render(request, 'myarticles.html')

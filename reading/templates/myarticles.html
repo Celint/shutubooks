@@ -1,36 +1,12 @@
 {% extends 'reading_theme.html' %}
 
 {% block title %}
-{#    TODO #}
+{#我的文章#}
 {% endblock title %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs" style="height: 700px">
-        </div>
-        
-        <ul class="list-group panel-body col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <li class="list-group-item"><h1>我发布的文章</h1></li>
-            <li class="list-group-item ">
-                <div class="media">
-                    <div class="media-body">
-                        <div id="title"><a href="">
-                                <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
-                            </a></div>
-                        <div id="brief">
-                            <p>215时报最新消息……</p>
-                        </div>
-                        <div id="author" class="pull-left">
-                            <p>the same author</p>
-                        </div>
-                        <div id="time" class="pull-right">
-                            <p>2019年9月29日</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="well col-lg-3 col-md-3 hidden-sm hidden-xs" style="position: fixed;z-index: 999">
+    <div class="container"> 
+        <div class="siderbar" style="width: 15%;float:left;">
             <ul class="list-group text-center" role="navigation">
                 <li class="list-group-item text-center"> <img src="../static/img/lianjie.png"
                         style="width:200px;height:200px; border-radius:10px" alt=""> </li>
@@ -49,7 +25,53 @@
                 </li>
             </ul>
         </div>
-        
+        <div class="contentbar" style="height:700px;float:right;width:83%">
+            <div class="panel-info">
+                <li class="panel-heading list-group-item">
+                    <h1>我发布的文章</h1>
+                </li>
+            </div>       
+            <div class="articles">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="media">
+                            <div class="media-body">
+                                <div id="title"><a href="">
+                                        <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                    </a></div>
+                                <div id="brief">
+                                    <p>215时报最新消息……</p>
+                                </div>
+                                <div id="author" class="pull-left">
+                                    <p>the same author</p>
+                                </div>
+                                <div id="time" class="pull-right">
+                                    <p>2019年9月29日</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <li class="list-group-item">
+                    <div class="media">
+                        <div class="media-body">
+                            <div id="title"><a href="">
+                                    <h2 class="media-heading">兰彬炎长高了，太令人震惊了</h2>
+                                </a></div>
+                            <div id="brief">
+                                <p>215时报最新消息……</p>
+                            </div>
+                            <div id="author" class="pull-left">
+                                <p>the same author</p>
+                            </div>
+                            <div id="time" class="pull-right">
+                                <p>2019年9月29日</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+            </div>            
+        </div> 
     </div>
 
 {% endblock content %}
