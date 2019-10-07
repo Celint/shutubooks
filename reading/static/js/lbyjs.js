@@ -11,6 +11,7 @@ function getTime() {
 	return date.getFullYear() + "-" + month + "-" + today+ " " + hours + ":" + minutes;
 }
 $(document).ready(function () {
+	//评论
 	$("#comment").click(function () {
 		var nc = $("#addContent").val();
 		var txt = "<li class='list-group-item'><p>"+"兰彬炎："+nc+"</p><p>"+getTime()+"</p></li>";
