@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>书僮网-登陆界面</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+		.right{
+			
+			padding-left: 100px;
+			padding-top: 100px;
+			width: 400px;
+			height: 500px;
+			
+		}
+	</style>
+	<script language="javascript">
+
+		function check(){
+			
+			var fr=document.form1;
+			var ischecked=document.getElementById("checkbox1").checked;
+			if(fr.name1.value==""){
+				alert("用户ID必须要填写！");
+				fr.name.focus();
+				return false;
+			}
+			if(fr.Password1.value==""){
+				alert("用户密码必须要填写！")
+				fr.Password1.focus();
+				return false;
+			}
+//			if(fr.Password2.value==""){
+//				alert("确认密码必须要填写！")
+//				fr.Password2.focus();
+//				return false;
+//			}
+//            if(fr.Password1.value!=fr.Password2.value){
+//				alert("密码不一致，请重新输入！");
+//				
+//				fr.Password2.focus();
+//				return false;
+//			}
+			if(ischecked==false){
+				alert("请同意用户协议!");
+			    fr.Password1.focus();
+				return false;
+			}
+			alert("提交成功");
+			fr.reset();
+			
+		
+		}
+
+	</script>
+</head>
+
+<body>
+	<div>
+		
+	<div class="container-fluid navigationbar">
+    <!--so many todos here-->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span
+            class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+            class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="#">书僮网</a>
+      </div>
+      <div class="collapse navbar-collapse" id="defaultNavbar1">
+        <ul class="nav navbar-nav">
+          <li><a href="index1.html">书城<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">博客</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              aria-expanded="false">关于<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">登录</a></li>
+          <li><a href="register.html">注册</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              aria-expanded="false">个人中心<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">个人信息</a></li>
+              <li><a href="#">我的卖书</a></li>
+              <li><a href="#">我的收藏</a></li>
+              <li><a href="#">学生认证</a></li>
+              <li><a href="#">我的文章</a></li>
+              <li><a href="#">我点赞的</a></li>
+              <li class="divider"></li>
+              <li><a href="#">退出登录</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+	<div class="right">
+<form name="form1">
+  <div class="form-group">
+    <label for="exampleInputPassword1">用户ID/邮箱</label>
+    <input type="name" class="form-control" id="exampleInputname1" placeholder="name/email" name="name1">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">输入密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password1" >
+  </div>
+<!--
+  <div class="form-group">
+    <label for="exampleInputPassword2">确认密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="Password2">
+  </div>
+-->
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="agreement" id="checkbox1" ><small><a href="#">我已同意用户协议</a></small>
+    </label>
+  </div>
+	
+  <button type="submit" class="btn btn-default" onclick="return check()">登录</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  未注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='register.html'">注册</buttom>
+
+</form> 
+	  </div>
+		<div class="footerbar">
+    <div id="footer" class="row well">
+      <div class="text-center">
+        <p>本站为中南大学学生创新创业项目，如有问题或建议，请联系作者。</p>
+        <p><span>CSUSHUTONG@163.com</span></p>
+        <p>CopyRight&copy;CSU书童</p>
+      </div>
+    </div>
+  </div>
+	</div>
+</body>
+</html>
