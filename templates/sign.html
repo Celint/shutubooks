@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>书僮网-登陆界面</title>
-	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}">
     <style>
 		.right{
 			
@@ -65,7 +65,7 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span
             class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
             class="icon-bar"></span><span class="icon-bar"></span></button>
-        <a class="navbar-brand" href="#">书僮网</a>
+        <a class="navbar-brand" href="http://localhost:80">书僮网</a>
       </div>
       <div class="collapse navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
@@ -134,7 +134,7 @@
   </div>
 	
   <button type="submit" class="btn btn-default" onclick="return check()">登录</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  未注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='register.html'">注册</buttom>
+  未注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='../regist/'">注册</buttom>
 
 </form> 
 	  </div>
