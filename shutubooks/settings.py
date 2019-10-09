@@ -84,8 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'shutubooks',
         'USER': 'root',
-        'PASSWORD': 'Jk0902_1704',
-        'HOST': '139.155.50.242',
+        'PASSWORD': '1987638cy',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -131,3 +131,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+

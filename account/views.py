@@ -7,3 +7,4 @@ def login(request):
 
 def regist(requset):
     return render(requset, 'register.html')
+
