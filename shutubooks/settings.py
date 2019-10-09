@@ -91,6 +91,17 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'shutubooks',
+#         'USER': 'root',
+#         'PASSWORD': 'Jk0902_1704',
+#         'HOST': '139.155.50.242',
+#         'PORT': '3306',
+#     }
+# }
+
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
