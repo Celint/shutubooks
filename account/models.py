@@ -17,14 +17,12 @@ class bookInf(models.Model):
     type = models.CharField(max_length=20)
     price = models.IntegerField(default=0)
     wearDegree = models.CharField(max_length=10, null=False)
+    img = models.ImageField(upload_to='icons')
 
     class Meta:
         verbose_name = 'bookInf'
 
-# class imgInf(models.Model):
-#     imgNum = models.CharField(max_length=10, primary_key=True)
-#     bookNum = models.ForeignKey('bookInf',on_delete=models.CASCADE)
-#     img = models.ImageField()
+
 
 class recordInf(models.Model):
     ownNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,primary_key=True)
@@ -32,3 +30,6 @@ class recordInf(models.Model):
     bookNum = models.ForeignKey('bookInf',on_delete=models.CASCADE,primary_key=True)
     # imgNum = models.ForeignKey('imgInf',on_delete=models.CASCADE)
     time = models.DateTimeField(auto_now_add=True,primary_key=True)
+
+    class Meta:
+        verbose_name = 'recordInf'
