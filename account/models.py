@@ -12,7 +12,7 @@ class stuInf(models.Model):
 
 class bookInf(models.Model):
     ownerNum = models.ForeignKey('stuInf',on_delete=models.CASCADE)
-    bookNum = models.CharField(max_length=10,primary_key=True)
+    bookNum = models.AutoField(primary_key=True)
     bookName = models.CharField(max_length=30)
     type = models.CharField(max_length=20)
     price = models.IntegerField(default=0)
@@ -29,7 +29,7 @@ class recordInf(models.Model):
     buyNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,related_name='buyer')
     bookNum = models.ForeignKey('bookInf',on_delete=models.CASCADE)
     # imgNum = models.ForeignKey('imgInf',on_delete=models.CASCADE)
-    time = models.DateTimeField(auto_now_add=True,)
+    time = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'recordInf'
