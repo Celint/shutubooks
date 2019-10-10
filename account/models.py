@@ -25,11 +25,12 @@ class bookInf(models.Model):
 
 
 class recordInf(models.Model):
-    ownNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,primary_key=True)
-    buyNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,primary_key=True)
-    bookNum = models.ForeignKey('bookInf',on_delete=models.CASCADE,primary_key=True)
+    ownNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,related_name='owner')
+    buyNum = models.ForeignKey('stuInf',on_delete=models.CASCADE,related_name='buyer')
+    bookNum = models.ForeignKey('bookInf',on_delete=models.CASCADE)
     # imgNum = models.ForeignKey('imgInf',on_delete=models.CASCADE)
-    time = models.DateTimeField(auto_now_add=True,primary_key=True)
+    time = models.DateTimeField(auto_now_add=True,)
 
     class Meta:
         verbose_name = 'recordInf'
+        unique_together = (("ownNum", "buyNum","bookNum","time"))
