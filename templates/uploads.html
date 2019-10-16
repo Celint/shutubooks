@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploads</title>
+</head>
+<body>
+
+<form action="{% url 'ac:uploads' %}", method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    <span>书名</span><input type='text' name="bookname" placeholder="请输入书名">
+    <span>分区：</span><input type='checkbox' name='type' value="literature" >文学
+    <input type='checkbox' name='type' value="Science" >理学
+    <span>照片</span><input type="file" name="icon">
+    <span>价格</span><input type="text" name="price">
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
