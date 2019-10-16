@@ -58,7 +58,12 @@
 
 {% block content %}
 	<div class="right">
-        <form name="form1">
+        <form method="POST" action="{% url 'ac:regist' %}" name="form1" enctype="multipart/form-data">
+            {% csrf_token %}
+         <div class="form-group">
+            <label for="exampleInputPassword1">学号</label>
+            <input type="name" class="form-control" id="exampleInputname1" placeholder="num" name="num">
+          </div>
           <div class="form-group">
             <label for="exampleInputPassword1">用户ID</label>
             <input type="name" class="form-control" id="exampleInputname1" placeholder="name" name="name1">
@@ -81,7 +86,8 @@
             </label>
           </div>
 
-          <button type="submit" class="btn btn-default" onclick="return check()">提交</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="submit"></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           已注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='../login/'">登录</buttom>
 
         </form>
