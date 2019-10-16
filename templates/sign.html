@@ -48,7 +48,7 @@
 				return false;
 			}
 			alert("提交成功");
-			fr.reset();
+			return true
 			
 		
 		}
@@ -81,7 +81,7 @@
             </label>
           </div>
 
-          <input type="submit" >
+          <input type="submit" onclick="return check()" >
           未注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='../regist/'">注册</buttom>
 
         </form>

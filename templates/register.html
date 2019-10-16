@@ -48,8 +48,7 @@
 				return false;
 			}
 			alert("提交成功");
-			fr.reset();
-			
+			return true
 		
 		}
 
@@ -86,7 +85,7 @@
             </label>
           </div>
 
-          <input type="submit"></input>
+          <input type="submit" onclick="return check()"></input>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           已注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='../login/'">登录</buttom>
 
