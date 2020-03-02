@@ -15,12 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+from . import views,settings
+from django.conf.urls import url
+from django.views.static import serve
+# from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index),
-    path('account/', include('account.urls', namespace='ac')),
+    path('', views.index,name='index'),
+    path('admin/', admin.site.urls),    
+    path('account/', include('account.urls')),
     path('reading/', include('reading.urls')),
+    path('login/', views.login, name='login'),
+    path('regist/', views.regist, name = 'regist'),
     path('books/', include('books.urls')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+
+    #媒体文件夹，可是为什么就是跑到C盘下面了呢？？？就因为，前面多了一个'/'。
+    #又来了，告诉我ac namespace没有被注册，可是我死活就是找不到
+    # url(r'^upload/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT})
+
 ]

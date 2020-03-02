@@ -12,11 +12,13 @@
 <!--	链接文件 -->
     <link rel="stylesheet" href="{% static 'css/lbystyle.css' %}">
     <link rel="stylesheet" href="{% static 'quote/bootstrap.css' %}" >
+    <link rel="stylesheet" href="{% static 'kindeditor/themes/simple/simple.css'%}">
     <script src="{% static 'quote/jQuery.js' %}"></script>
     <script src="{% static 'quote/bootstrap.js' %}"></script>
     <script src="{% static 'quote/popper.min.js' %}" ></script>
     <script src="{% static 'kindeditor/kindeditor-all.js' %}"></script>
     <script src="{% static 'kindeditor/lang/zh-CN.js' %}"></script>
+
 </head>
 
 <body>
@@ -27,27 +29,11 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span
             class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
             class="icon-bar"></span><span class="icon-bar"></span></button>
-          <a class="navbar-brand" href="http://127.0.0.1:8000">
+            <a class="navbar-brand" href="{% url 'index' %}">
               <img src="{% static 'img/logo.png' %}" alt="" style="height:150%"/>
-          </a>{# TODO:添加首页 #}
+          </a>
       </div>
       <div class="collapse navbar-collapse" id="defaultNavbar1">
-        <ul class="nav navbar-nav">
-          <li><a href="../books/">书城</a></li>
-          <li class="active"><a href="#">博客<span class="sr-only">(current)</span></a></li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-              aria-expanded="false">关于<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
@@ -55,21 +41,26 @@
           <button type="submit" class="btn btn-default">搜索</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://127.0.0.1:8000/account/login/">登录</a></li>  {# TODO:链接需要改 #}
-            <li><a href="http://127.0.0.1:8000/account/regist/">注册</a></li> {# TODO:链接需要改 #}
+            {%if user_name%}
+            <li><a href="#">欢迎您！{{user_name}}</a></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-              aria-expanded="false">个人中心<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">个人信息</a></li>
-              <li><a href="#">我的卖书</a></li>
-              <li><a href="#">我的收藏</a></li>
-              <li><a href="#">学生认证</a></li>
-              <li><a href="#">我的文章</a></li>
-              <li><a href="#">我点赞的</a></li>
-              <li class="divider"></li>
-              <li><a href="#">退出登录</a></li>
-            </ul>
-          </li>
+                aria-expanded="false">个人中心<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">个人信息</a></li>
+                <li><a href="#">我的卖书</a></li>
+                <li><a href="#">我的收藏</a></li>
+                <li><a href="#">学生认证</a></li>
+                <li><a href="#">我的文章</a></li>
+                <li><a href="#">我点赞的</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出登录</a></li>
+              </ul>
+            </li>
+            {%else%}
+            <li><a href="{%url 'login'%}">登录</a></li>
+            <li><a href="{%url 'regist'%}">注册</a></li>
+            {%endif%}
+            
         </ul>
       </div>
     </nav>

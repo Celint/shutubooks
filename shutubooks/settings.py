@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reading',
-    'account'
+    'account',
+    'books',
 ]
 
 MIDDLEWARE = [
@@ -50,14 +51,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+X_FRAME_OPTIONS = 'ALLOWALL url'
 ROOT_URLCONF = 'shutubooks.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,17 +80,27 @@ WSGI_APPLICATION = 'shutubooks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'shutubooks',
+#         'USER': 'root',
+#         'PASSWORD': '1987638cy',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shutubooks',
+        'NAME': 'shutu',
         'USER': 'root',
-        'PASSWORD': '1987638cy',
+        'PASSWORD': 'lby1258',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
-
 
 # DATABASES = {
 #     'default': {
@@ -144,4 +154,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'static/uploads')
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240

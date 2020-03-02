@@ -5,85 +5,97 @@
 {% endblock title %}
 
 {% block static %}
-    <style>
-		.right{
-			
-			padding-left: 100px;
-			padding-top: 100px;
-			width: 400px;
-			height: 500px;
-			
+    <style>		
+		.container_middle{
+			margin: 10px auto;
+			height: auto;
+			width: 50%;
+			border: 2px whitesmoke;
+			background-color:white;
 		}
 	</style>
 	<script language="javascript">
-
+		$(document).ready(function(){
+			
+			var csrftoken = getCookie("csrftoken");
+			$.ajaxSetup({
+				beforeSend: function (xhr, settings) {
+					if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+						xhr.setRequestHeader("X-CSRFToken", csrftoken);
+					}
+				}
+			})
+			$('#sign_commit').submit(function(e){
+				// e.preventDefault();这不行，这就变成套娃了
+				// set the check function
+				var fr = document.form1;
+				if (fr.userId.value == "") {
+					$('#msg').text('请填写账号！');
+					// alert("用户ID必须要填写！");
+					fr.userId.focus();
+					$('#msg_con').show();
+					e.preventDefault();
+					return false;
+				}
+				if (fr.userPass.value == "") {
+					// alert("用户密码必须要填写！")
+					$('#msg').text('请填写密码！');
+					fr.userPass.focus();
+					$('#msg_con').show();
+					e.preventDefault();
+					return false;
+				}
+				$('#sign_commit').submit();
+				// $('#msg_con').show();
+				return true;
+			})
+		})
 		function check(){
-			
-			var fr=document.form1;
-			var ischecked=document.getElementById("checkbox1").checked;
-			if(fr.name1.value==""){
-				alert("用户ID必须要填写！");
-				fr.name.focus();
+			var fr = document.form1;
+			// var wrong = false;
+			if (fr.userId.value == "") {
+				$('#msg').text('请填写账号！');
+				// alert("用户ID必须要填写！");
+				fr.userId.focus();
+				$('#msg_con').show();
 				return false;
 			}
-			if(fr.Password1.value==""){
-				alert("用户密码必须要填写！")
-				fr.Password1.focus();
+			if (fr.userPass.value == "") {
+				// alert("用户密码必须要填写！")
+				$('#msg').text('请填写密码！');
+				fr.userPass.focus();
+				$('#msg_con').show();
 				return false;
 			}
-//			if(fr.Password2.value==""){
-//				alert("确认密码必须要填写！")
-//				fr.Password2.focus();
-//				return false;
-//			}
-//            if(fr.Password1.value!=fr.Password2.value){
-//				alert("密码不一致，请重新输入！");
-//				
-//				fr.Password2.focus();
-//				return false;
-//			}
-			if(ischecked==false){
-				alert("请同意用户协议!");
-			    fr.Password1.focus();
-				return false;
-			}
-			alert("提交成功");
-			return true
-			
-		
+			// $('#sign_commit').submit();
+			// $('#msg_con').show();
+			return true;
 		}
-
 	</script>
 {% endblock static %}
 
 {% block content %}
-	<div class="right">
-        <form method="POST" action="{% url 'ac:login' %}" name="form1" >
+	<div class="container_middle">
+        <form method="POST" action="{% url 'login' %}" name="form1" id="sign_commit">
             {% csrf_token %}
           <div class="form-group">
-            <label for="exampleInputPassword1">用户ID/邮箱</label>
-            <input type="name" class="form-control" id="exampleInputname1" placeholder="name/email" name="name1">
+            <label for="exampleInputPassword1">学号</label>
+            <input type="name" class="form-control" id="exampleInputname1" placeholder="id" name="userId">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">输入密码</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password1" >
-          </div>
-        <!--
-          <div class="form-group">
-            <label for="exampleInputPassword2">确认密码</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="Password2">
-          </div>
-        -->
-
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="agreement" id="checkbox1" ><small><a href="#">我已同意用户协议</a></small>
-            </label>
-          </div>
-
-          <button type="submit" class="btn btn-default" onclick="return check()">提交</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  已注册？<buttom type="buttom" class="btn btn-default" onclick="location.href='../login/'">登录</buttom>
-
-        </form>
+            <label for="exampleInputPassword1">密码</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="userPass">
+		  </div> 
+		<button type="submit" class="btn btn-info" >登录</button>
+		<a href="{% url 'regist' %}">未注册?</a>
+		</form>
+		{%if back%}
+		<div class="alert alert-warning"> 
+			<a style="color: red;" href="{% url 'login' %}">{{back}}</a>
+		</div>
+		{%endif%}
+		<div class="alert alert-warning" id='msg_con' hidden>
+			<a style="color: red;" href="{% url 'login' %}" id="msg">{{back}}</a>
+		</div>
 	  </div>
 {% endblock content %}
